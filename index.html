@@ -1,0 +1,125 @@
+<!--Original website based on Canada Learning Code content found here: https://github.com/ladieslearningcode/llc-html-css-multi-page-site.git an is made available to the public under the Creative Commons (CC BY-NC 4.0) license.-->
+<!--This version of the page is also available under the same CC license found here: https://creativecommons.org/licenses/by-nc/4.0/ -->
+<!--This document has been altered from its original to demonstrate errors in HTML5 and is intended to be used as a part of a lesson on how to use the W3C HTML Validator-->
+<!--https://line25.com/articles/10-common-validation-errors-and-how-to-fix-them offers a list of common HTML errors that were used in this exercise-->
+
+
+
+
+<!--ERROR #1: Missing DOCTYPE declaration-->
+<!--<!DOCTYPE html>-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaron M Champagne</title>
+
+    <!-- <link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">-->
+
+
+    <!--By removing and adding the CSS link below we can see the difference between structure and style. HTML is about structure, CSS is about style.-->
+    <!-- PUT THE STYLESHEET LINK HERE -->
+    <!--<link rel="stylesheet" href="css/styles.css">-->
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <!--ERROR #2: Missing a closing tag-->
+        <h1 class="name">
+            Aaron M Champagne<!--</h1>-->
+            <br> <!--ERROR #3: missing / on self-closing tag. List of self-closing tags found here: http://xahlee.info/js/html5_non-closing_tag.html -->
+            <h2>Wildfire Lookout & Coder</h2><!--ERROR #4: Forgetting to convert special characters-->
+</header>
+
+
+    <!-- ABOUT ME / PROFILE -->
+    <section class="profile">
+        <div class="content-wrap">
+            <img src="images/profilepicture.png"> <!--ERROR #7: no alt attribute on an image-->
+            <div class="summary" width="50px"><!--ERROR #8: using attributes like width and height instead of CSS-->
+                <h1>Seeking Remote Full Stack Development</h1>
+                <p>Creative professional with experience in digital design, application development, and database reporting. Most recent digital work was as an educator teaching a full-stack development bootcamp with the University of Alberta. Strong commitment to quality assurance and documentation processes.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- WORK EXPERIENCE -->
+    <section class="work-experience">
+        <div class="1content-wrap"><!--ERROR #9: Using a number to start a class or id value-->
+            <h1 class="left">Work Experience</h1>
+
+            <div class="item">
+
+                <div class="details">
+                    <h2 class="company">Government of Alberta</h2>
+                    <h3>Wildfire Lookout Observer</h3>
+                    <p class="date">April 2009 - September 2021</p>
+                </div>
+                <div class="description">
+                    <p><em>Learn more about my life as a Wildfire Lookout Observer from <a href="https://www.macleans.ca/society/environment/the-lonely-life-of-a-wildfire-lookout-in-northern-alberta/">my interview with Maclean's</a> magazine.</em></p>
+                    <p>Working alone in a remote location for up to 198 days at a time requires good planning and the discipline to follow through with those plans. Weather, wildlife, and administrative changes can challenge Lookout Observers to adapt to unplanned events and conditions.  The extreme isolation that comes from being in the woods for so long is only combated by committing oneself to personal development. It was at my first tower that I started learning to code in ActionScript 3.0, and it was at my fire tower where I studied to earn a 4.0 GPA at NAIT. My time in the forest has been a secret weapon that I have used to accomplish my goals during the most successful decade of my life.</p>
+                    <p>Certifications required for Wildfire Lookout Observers includes CPR Level C with AED, a Radio Operator’s License, Incident Command System 100, and successful completion of the Lookout Observer Course at the Hinton Training Centre. Lookout Observers are trained in mapping, wildfire detection, radio protocols, wildfire reporting, safety (including interpersonal conflict management), fall arrest systems, weather recording, and the proper use of bear spray.</p>
+                </div>
+            </div>
+
+            <div class="item">
+
+                <div class="details">
+                    <h2 class="company">University of Alberta</h2>
+                    <h3>Instructor - TechCareers & Technology Training Centre</h3>
+                    <p class="date">January 2020 - March 2021</p>
+                </div>
+                <div class="description">
+                    <p>TechCareers was created as a full stack developer bootcamp intended for students who were on employment insurance and interested in trying a new career in technology. The course was originally delivered at Enterprise Square campus but after the outbreak of Covid-19 delivery was moved online. Some course content was available from previous cohorts of the TechCareers program but most content had to be created, tested, delivered, and graded by staff on short turnaround times. The entire course was rewritten in a few short months and delivered to the following two cohorts before provincial cutbacks ended the TechCareers program. Students in this program were incredibly diverse with some students being total beginners to code.</p>
+                    <p>I am very proud of my students accomplisments and the hard work my team put into the TechCareers program. My role was initially focused on creating course content and lesson plans but as time went on I took on more administrative duties and also initiated an after-hours homework help program that most students found to be effective. TechCareers challenged my leadership and communication skills while teaching me how to reach the next level of my craft.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="education">
+        <div class="content-wrap">
+            <h1>Education & Training</h1>
+
+            <div class="item">
+                <h2>NAIT, 2017</h2>
+                <h3>Professional Development, MVC I & MVC II</h3>
+                <p>Advanced components and development patterns used when developing web applications using the MVC pattern. This includes using Ajax, JSON, Partial View rendering, Client validation. The student will be introduced to Test Driven Development (TDD) and learn Best Practices using MVC.</p>
+            </div>
+            <span>
+                <!--ERROR #6: Block element nested inside inline element https://www.w3schools.com/html/html_blocks.asp -->
+                <div class="item">
+                    <h2>NAIT, 2016</h2>
+                    <h3>Digital Media & IT (Application Development), Diploma</h3>
+                    <p>Dean’s Honour Roll (4.0 GPA). Elected, Senate, NAIT Student Association. Jason Lang scholarship recipient. Diploma with designation in Application Development.</p>
+                    <p>Learned to work with ASP.NET in C# and SQL to create validated web-forms and client-server applications. Elected to take both iOS development and Android development as well as Mobile Production I which taught Flash and ActionScript 3.0. Built applications with REST, Backbone.js, jQuery, Handlebars, HTML5 Canvas, Fabric.js, and Less.js. Used Google Books API, Flickr API, and Google Maps API. Learned enterprise-level application development with Java, Apache Maven, JUnit, and PrimeFaces. Comfortable with Git, Visual Studios, Eclipse, and XCode.</p>
+                    <p>For my final project I was co-leader of a 16-person team working on a prototype for U of A researcher Dr. Rose Yeung. Together we used a Laravel/Postgres framework to create a website that would connect clinical researchers with study candidates based on profiles for research studies and for the candidates.</p>
+                </div>
+            </span>
+        </div>
+    </section>
+
+    <!-- CONTACT INFO -->
+    <section class="contact">
+        <div class="content-wrap">
+            <h1>Let's keep in touch!</h1>
+
+            <div class="social">
+                <!--ERROR #5: Unencoded characters in URLS - These URLs won't work even after you remove the space characters though...-->
+                <a href="mailto:email@Your Site Here.ca" title="Email"><i class="fa fa-envelope"></i></a>
+                <a href="https://twitter.com/Your Account Here" title="Twitter"><i class="fa fa-twitter"></i></a>
+                <a href="https://linkedin.com/in/Your Account Here" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/Your Account Here" title="Github"><i class="fa fa-github-alt"></i></a>
+            </div>
+
+            <footer>
+                <p class="copyright"><a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons License 4.0</a></p>
+            </footer>
+        </div>
+    </section>
+</body>
+</html>

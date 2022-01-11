@@ -1,0 +1,372 @@
+/*---------------------------------------
+Template created by Christina Truong
+for Ladies Learning Code 
+http://ladieslearningcode.com
+http://christinatruong.com
+-----------------------------------------*/
+
+
+/* GLOBAL STYLES
+-----------------*/
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inconsolata', monospace;
+  
+  line-height: 1.5;
+  background: url(../images/StormySky.jpg) no-repeat fixed;
+  background-position: center top;
+  background-size: cover;
+  padding: 0;
+  margin: 0 auto 0 auto;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+section h1, 
+header h2 {
+  text-transform: uppercase;
+}
+header h1 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 7em;
+  color: white;
+}
+
+header h2,
+section h1 {
+  font-size: 2em;
+}
+
+section h1 {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+/* every other section element, 
+starting with the second section */
+section:nth-child(2n+1) { 
+  background: #fefefe;
+}
+
+section:nth-child(2n+2) {
+  color: #fff;
+  background: rgba(78, 80, 41, 0.7);
+}
+
+a {
+  color: rgba(78, 80, 41, 1);
+}
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 20px;
+}
+ul li {
+  margin-bottom: 5px;
+}
+
+.content-wrap {
+  display: flex;
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 70px 0; 
+  overflow: auto;
+}
+
+
+/* HEADER
+----------*/
+header {
+  text-align: center;
+  padding: 200px 50px;
+  margin: 0px;
+}
+
+
+/* ABOUT ME / PROFILE
+----------------------*/
+.profile .content-wrap {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.profile h1 {
+  background: rgba(78, 80, 41, 1);
+  display: inline-block;
+  padding: 10px 20px;
+  transform: rotate(-4deg);
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+}
+
+.tower-image {
+  flex-basis: 27%;
+  margin-right: 3%;
+  padding: 4px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  max-width: 30%;
+}
+.profile-image {
+  flex-basis: auto;
+  margin-right: 3%;
+  padding: 4px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  max-width: 30%;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+
+
+/* WORK EXPERIENCE & EDUCATION
+-------------------------------*/
+/* job & education entries */
+.item {
+  display: flex;
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding: 20px 0;
+}
+
+.item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+
+/* WORK EXPERIENCE
+-------------------*/
+.work-experience .content-wrap {
+  flex-direction: column;
+}
+
+.work-experience .date {
+  margin: 5px 0 20px 0;
+  font-size: 0.8em;
+}
+
+.work-experience h3 {
+  line-height: 1.25em;
+  font-size: 1.2em;
+  color: rgba(78, 80, 41, 1);
+}
+
+.work-experience a:hover {
+  color: rgba(78, 80, 41, .4);
+}
+
+.work-experience .details {
+  flex: 0 0 30%;
+  padding-right: 30px;
+}
+
+.work-experience .description {
+  font-size: 1em;
+  margin-top: 5px;
+}
+
+.work-experience .description p:first-child {
+  margin-top: 3px;
+}
+
+.company {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  color: black;
+}
+.company h3{
+  color: rgba(78, 80, 41, .5);
+}
+
+/* EDUCATION
+-------------*/
+.education .content-wrap {
+  flex-direction: column;
+}
+
+.education h2 {
+  text-transform: uppercase;
+}
+
+.education h3 {
+  color: rgba(255, 255, 255, .7);
+  font-size: 1.2em;
+}
+
+.education .item {
+  flex-direction: column;
+}
+
+/* PORTFOLIO
+-------------*/
+
+.portfolio .content-wrap {
+  flex-direction: column;
+}
+
+.portfolio h2 {
+  text-transform: uppercase;
+}
+
+.portfolio h3 {
+  color: rgba(255, 255, 255, .7);
+  font-size: 1.2em;
+}
+
+.portfolio .item {
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.portfolio .item-row {
+  flex-direction: row;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.portfolio img {
+  max-width: 100%
+}
+
+/* Flash
+--------------------*/
+.flash .content-wrap {
+  flex-wrap: wrap;
+}
+
+.flash img{
+  width: 100%;
+  border: 0.2em solid white;
+}
+.flash h1{
+  width: 100%;
+}
+
+/* CONTACT & FOOTER 
+--------------------*/
+.contact {
+  background: #111;
+}
+
+.contact .content-wrap {
+  flex-wrap: wrap;
+}
+
+.contact h1 {
+  flex-basis: 100%;
+  order: 1;
+}
+
+.contact p {
+  margin: 0;
+}
+
+.contact .social {
+  text-align: right;
+  font-size: 2em;  /* Icon sizes */
+  order: 3;
+}
+
+.contact .social a {
+  margin: 0 8px;
+}
+
+.social a:hover {
+  color: rgba(78, 80, 41, 0.4);
+} 
+
+
+footer {
+  font-size: 0.7em;
+  margin-top: 50px;
+  flex-basis: 100%;
+  order: 4;
+}
+
+.three-col {
+  width: 33.33%;
+  float: left;
+  display: inline;
+}
+
+.three-col h2, .three-col p {
+  display: inline;
+}
+
+/* MEDIA QUERIES
+--------------------*/
+@media (max-width: 800px) {
+  /* this is here just for testing */
+  body {
+    /*color: blue;*/
+  }
+
+  /* About section */
+  .profile-image {
+    width: 48%;
+    margin: 0 0 0 2%;
+    order: 1;
+  }
+
+  .item {
+    flex-direction: column; /* Change the orientation from 'row' to 'column'. */
+  }
+
+  .work-experience .details {
+    flex-basis: 100%; /* Take up 100% of the horizontal space. */
+    padding-right: 0px; /* Don't need padding anymore now that it spans across the page. */
+  }
+
+  .work-experience .description {
+    flex-basis: 100%; /* Take up 100% of the horizontal space. */
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 75px 40px;
+  } 
+  
+  header h1 {
+    font-size: 45px;
+  }
+  
+  header h2,
+  section h1 {
+    font-size: 24px;
+  }
+  
+  .education h2 {
+    font-size: 18px;
+  }
+  
+  .contact .social {
+    flex-basis: 100%; /* Take up 100% of the horizontal space. */
+    text-align: left; /* Align the icons to the left. */
+    margin-bottom: 20px;
+  }
+}
